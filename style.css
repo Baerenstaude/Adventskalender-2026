@@ -1,0 +1,30 @@
+.chapter-heading{
+  background-color: rgb(148, 148, 148);
+  padding: 1rem;
+  font-size: xx-large;
+}
+
+.flex-box{
+  display: flex;
+  align-items: center;
+}
+
+.image-text{
+  padding: 1rem;
+  max-width: 40rem;
+}
+
+#increase-button{
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: xx-large;
+}
+
+#display{
+  display: flex;
+  border: solid black 1px;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: xx-large;
+}
