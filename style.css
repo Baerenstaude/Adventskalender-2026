@@ -16,6 +16,16 @@
   font-family: "Arial";
 }
 
+.container { 
+  position: relative; width: 75rem; /* Anpassen nach Bedarf */
+} .unteres-bild { width: 100%; height: auto; 
+} 
+
+.oberes-bild { 
+  width: 8rem; /* Größe des oberen Bildes anpassen */ 
+  height: auto;
+}
+
 #colorchange-button{
   display: flex;
   padding: 1rem;
