@@ -1,7 +1,7 @@
 .chapter-heading{
   background-color: #585858;
   padding: 1rem;
-  font-size: xx-large;
+  font-size: 6rem;
   font-family: "Brush Script MT";
 }
 
@@ -12,6 +12,7 @@
 
 .Uberschriften{
   font-family: "Arial";
+  font-size: 3rem;
 }
 
 .Haupttext{
