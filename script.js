@@ -1,36 +1,41 @@
 let count = 0
 let disp = document.getElementById("display");
 
-function changeBackgroundColor(){
+function myFunction(){
     console.log("hello world")
     console.log("clicked " + count + " times...")
     count ++;
     disp.innerHTML = count;
 }
 
-function changeBackgroundColor(){
-    color = document.body.style.backgroundColor
-    if (color = "grey"){
-        document.body.style.backgroundColor = "white"
-    } if (color = "white") { 
-        document.body.style.color = "pink"
+function changeBackgroundColor() {
+    // Hintergrundfarbe abrufen
+    let backgroundColor = document.body.style.backgroundColor;
+    
+    // Hintergrundfarbe ändern
+    if (backgroundColor !== "grey") {
+    document.body.style.backgroundColor = "grey";
     } else {
-        document.body.style.backgroundColor = "grey"
+    document.body.style.backgroundColor = "pink";
     }
     
-    color = document.body.style.color
-    if (color != "white"){
-        document.body.style.color = "white"
+    // Textfarbe abrufen
+    let color = document.body.style.color;
+    
+    // Textfarbe ändern
+    if (backgroundColor === "grey") {
+    document.body.style.color = "black";
     } else {
-        document.body.style.color = "black"
+    document.body.style.color = "white";
     }
     
-    color = document.chapterheading.style.color
-    if (color = "grey"){
-        document.chapterheading.style.color = "white"
-    } if (color = "white") { 
-        document.chapterheading.style.color = "pink"
-    }else {
-        document.chapterheading.style.color = "grey"
+    // Kapitelüberschrift Farbe ändern
+    let chapterHeading = document.getElementById("chapterheading"); // Beispiel für den Zugriff auf das Element
+    let chapterColor = chapterHeading.style.color;
+    
+    if (chapterColor !== "grey") {
+    chapterHeading.style.color = "grey";
+    } else {
+    chapterHeading.style.color = "pink";
     }
-}
+    }
