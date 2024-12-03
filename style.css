@@ -1,7 +1,8 @@
 .chapter-heading{
-  background-color: rgb(148, 148, 148);
+  background-color: #585858;
   padding: 1rem;
   font-size: xx-large;
+  font-family: "Brush Script MT";
 }
 
 .flex-box{
@@ -9,8 +10,12 @@
   align-items: center;
 }
 
-.image-text{
-  padding: 1rem;
+.Uberschriften{
+  font-family: "Arial";
+}
+
+.Haupttext{
+  padding: 0.2rem;
   max-width: 40rem;
 }
 
@@ -27,4 +32,10 @@
   padding: 1rem;
   margin: 1rem;
   font-size: xx-large;
+}
+
+body{
+  background-color: #585858;
+  color:rgb(255,255,255);
+  padding: 1rem;
 }
