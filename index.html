@@ -6,7 +6,27 @@
     <title>My cool website 8)</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" async></script>
-  </head>
+    
+    <style> 
+    .container { 
+      position: relative; 
+      width: 100%; /* Breite des Containers */ 
+      height: auto; /* Höhe des Containers */ 
+      background-image: url('img/image copy 2.png'); /* Hintergrundbild */ 
+      background-size: 100%; /* Größe des Hintergrundbilds anpassen */ 
+      display: grid; 
+      grid-template-columns: repeat(6, 1fr); /* 6 Spalten */ 
+      grid-template-rows: repeat(4, 1fr); /* 4 Reihen */ 
+      gap: 1rem; /* Abstand zwischen den Bildern */ 
+      padding: 1rem;
+  }  
+  .container img {
+     width: 100%; 
+     height: auto;
+  }
+    </style>
+  
+</head>
   <body>
     <h1 class="chapterheading">Online Adventskalender</h1>
     
@@ -18,12 +38,9 @@
     </div>
 
     <div class="container"> 
-      <img src="img/image copy 2.png" alt="Vordergrund" class="unteres-bild">
-       <img src="img/image.png" alt="1.Dez" class="oberes-bild"
-      style="position: absolute; top: 1rem; left: 1rem;">
-       <img src="img/image copy.png" alt="2.Dez" class="oberes-bild"
-       style= "position: absolute; top: 1rem; left: 11rem;" >
-      </div>
+        <img src="img/image copy.png" alt="1.Dez"> 
+        <img src="img/image.png" alt="2.Dez"> 
+    </div>
 
     <div>
       <h1 class="Uberschriften">Schlusswort</h1>
