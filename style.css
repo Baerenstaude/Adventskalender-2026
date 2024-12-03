@@ -1,5 +1,5 @@
-.chapter-heading{
-  background-color: #585858;
+.chapterheading{
+  background-color: "grey";
   padding: 1rem;
   font-size: 6rem;
   font-family: "Brush Script MT";
@@ -18,14 +18,20 @@
 .Haupttext{
   padding: 0.2rem;
   max-width: 40rem;
+  font-family: "Arial";
 }
 
-#increase-button{
+#colorchange-button{
   display: flex;
   padding: 1rem;
   margin: 1rem;
   font-size: xx-large;
 }
+
+.backgroundcolor{
+  background-color: "grey";
+}
+
 
 #display{
   display: flex;
@@ -36,7 +42,7 @@
 }
 
 body{
-  background-color: #585858;
-  color:rgb(255,255,255);
+  background-color: "grey";
+  color:"white";
   padding: 1rem;
 }
