@@ -13,10 +13,12 @@ function changeBackgroundColor() {
     let backgroundColor = document.body.style.backgroundColor;
     
     // Hintergrundfarbe ändern
-    if (backgroundColor !== "grey") {
-    document.body.style.backgroundColor = "grey";
+    if (backgroundColor === "grey") {
+        document.body.style.backgroundColor = "white";
+    } else if (backgroundColor === "white") {
+        document.body.style.backgroundColor = "pink";
     } else {
-    document.body.style.backgroundColor = "pink";
+        document.body.style.backgroundColor = "grey";
     }
     
     // Textfarbe abrufen
@@ -24,18 +26,20 @@ function changeBackgroundColor() {
     
     // Textfarbe ändern
     if (backgroundColor === "grey") {
-    document.body.style.color = "black";
+        document.body.style.color = "black";
     } else {
-    document.body.style.color = "white";
+        document.body.style.color = "white";
     }
     
     // Kapitelüberschrift Farbe ändern
     let chapterHeading = document.getElementById("chapterheading"); // Beispiel für den Zugriff auf das Element
     let chapterColor = chapterHeading.style.color;
     
-    if (chapterColor !== "grey") {
-    chapterHeading.style.color = "grey";
+    if (chapterColor === "grey") {
+        chapterHeading.style.color = "white";
+    } else if (chapterColor === "white") {
+        chapterHeading.style.color = "pink";
     } else {
-    chapterHeading.style.color = "pink";
+        chapterHeading.style.color = "grey";
     }
     }
