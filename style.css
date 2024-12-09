@@ -16,14 +16,36 @@
   font-family: "Arial";
 }
 
-.container { 
-  position: relative; width: 75rem; /* Anpassen nach Bedarf */
-} .unteres-bild { width: 100%; height: auto; 
-} 
+.container {
+  width: 100%; /* Breite des Containers */ 
+  height: 41rem; /* Höhe des Containers */ 
+  background-image: url('img/image copy 2.png'); /* Hintergrundbild */ 
+  background-size: 77rem; /* Größe des Hintergrundbilds anpassen */ 
+  display: grid; 
+  grid-template-columns: repeat(6, 1fr); /* 6 Spalten */ 
+  grid-template-rows: repeat(4, 1fr); /* 4 Reihen */ 
+  gap: 1rem; /* Abstand zwischen den Bildern */ 
+  padding: 1rem;
+}  
 
-.oberes-bild { 
-  width: 8rem; /* Größe des oberen Bildes anpassen */ 
+.container button {
+  position: relative; 
+  width: 12rem; 
+  height: 12rem;
+  background-color: transparent;
+  border: 0.1rem solid black; /* Rahmen hinzufügen */
+  color: black; /* Textfarbe */
+  font-size: 10rem; /* Schriftgröße */
+  font-family: "Brush Script MT";
+  text-align: center; /* Textausrichtung */
+  cursor: pointer;
+}
+
+.container img {
+  display: none; /* Bilder standardmäßig ausblenden */
+  width: 11rem; 
   height: auto;
+  margin: 0rem;
 }
 
 #colorchange-button{

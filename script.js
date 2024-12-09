@@ -20,6 +20,8 @@ function changeBackgroundColor() {
     } else {
         document.body.style.color = "white";
     }
+
+}
     
     // Kapitelüberschrift Farbe ändern
     let chapterHeading = document.getElementById("chapterheading"); // Beispiel für den Zugriff auf das Element
@@ -32,4 +34,16 @@ function changeBackgroundColor() {
     } else {
         chapterHeading.style.color = "grey";
     }
+
+function showImage(buttonElement) {
+       let Türchenzahl = document.getElementById("container button");
+       const img = buttonElement.querySelector('img');
+       
+    if (img) {
+        img.style.display = 'block'; // Zeige das Bild an
+        buttonElement.style.border = 'none';
+        buttonElement.style.color = 'transparent';
+        buttonElement.style.cursor = 'default';
+        buttonElement.disabled = true; // Button deaktivieren
     }
+} 
