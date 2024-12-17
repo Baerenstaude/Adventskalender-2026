@@ -63,7 +63,7 @@
 
 #penguin{
   position: absolute; /* Absolut positionieren */
-      top: 8rem;          /* Abstand vom oberen Rand */
+      top: 0rem;          /* Abstand vom oberen Rand */
       left: 55rem;        /* Abstand vom linken Rand */
       transform: scale(1); /* Optional: weitere Skalierung */
  
@@ -71,6 +71,6 @@
 
 body{
   background-color: grey;
-  color:"white";
+  color:white;
   padding: 1rem;
 }
