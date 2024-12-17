@@ -12,7 +12,13 @@
 
 .Haupttext{
   padding: 0.2rem;
-  max-width: 40rem;
+  max-width: 80rem;
+  font-family: "Arial";
+}
+
+#introtext{
+  padding: 0.2rem;
+  max-width: 50rem;
   font-family: "Arial";
 }
 
