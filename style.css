@@ -56,10 +56,10 @@
 }
 
 #penguin{
-  transform: scale(2);
-  position: absolute;
-  top: 400px;
-  right: 100px;
+  position: absolute; /* Absolut positionieren */
+      top: 8rem;          /* Abstand vom oberen Rand */
+      left: 55rem;        /* Abstand vom linken Rand */
+      transform: scale(1); /* Optional: weitere Skalierung */
  
 }
 
