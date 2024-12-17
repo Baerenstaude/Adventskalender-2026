@@ -1,4 +1,4 @@
-.chapterheading{
+#chapter-heading{
   background-color: "grey";
   padding: 1rem;
   font-size: 6rem;
@@ -24,7 +24,7 @@
   display: grid; 
   grid-template-columns: repeat(6, 1fr); /* 6 Spalten */ 
   grid-template-rows: repeat(4, 1fr); /* 4 Reihen */ 
-  gap: 1rem; /* Abstand zwischen den Bildern */ 
+  gap: 0.7rem; /* Abstand zwischen den Bildern */ 
   padding: 1rem;
 }  
 
@@ -55,8 +55,16 @@
   font-size: xx-large;
 }
 
+#penguin{
+  transform: scale(2);
+  position: absolute;
+  top: 400px;
+  right: 100px;
+ 
+}
+
 body{
-  background-color: "grey";
-  color:"grey";
+  background-color: "pink";
+  color:"black";
   padding: 1rem;
 }
