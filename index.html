@@ -46,5 +46,96 @@
       <button id="colorchange-button" onclick="changeBackgroundColor()">Style ändern</button>
     </div>
     
+
+    <svg height="360" width="3000">
+      <g transform="translate (-7, 30)">
+      <ellipse cx="150" cy="150" rx="50" ry="100" fill="black">
+      </ellipse>
+       <rect width="40" height="10" x="53" y="89" rx="20" ry="20" fill= rgb(130,80,0) />
+       <ellipse cx="104" cy="97" rx="14" ry="4" fill="gold" stroke="black">
+      </ellipse>
+      <ellipse cx="104" cy="90" rx="20" ry="7" fill="gold" stroke="black">
+      </ellipse>
+      <ellipse cx="150" cy="80" rx="13" ry="10" fill="white" stroke="red" stroke-width="3">
+      </ellipse>
+      <ellipse cx="150" cy="80" rx="5" ry="5" fill="black">
+      </ellipse>
+       <ellipse cx="120" cy="170" rx="18" ry="54" fill="white" stroke="black">
+      </ellipse>
+      <ellipse cx="135" cy="248" rx="35" ry="10" fill="orange" stroke="black">
+      <animate attributeName="rx" values="350;1;10" dur="0.5s" repeatCount="indfinite"/>
+      </ellipse>
+  
+      <path d="M 125 60 L 184 73 L 188 68 L 184 62 L 128 49 L 123 53 Z" fill="lightgray" />
+      
+      <path d="M 128 49 L 150 35 L 190 30 L 230 60 L 240 130 L 220 80 L 184 62 Z" fill="red" />
+      
+      <circle cx="240" cy="130" r="10" fill="lightgray" stroke="black"/>
+      
+      <clipPath id="clip-circle">
+        <rect x="150" y="135" width="150" height="150" />
+      </clipPath>
+      <ellipse cx="170" cy="150" rx="15" ry="80" fill= rgb(0,0,0) stroke= "grey"
+      clip-path="url(#clip-circle)"/>
+      </ellipse>
+  
+      <path id="circle-motion" d="M 125 60 L 184 73 L 188 68 L 184 62 L 128 49 L 123 53 Z" fill="lightgray" stroke="black"/>
+      </g>
+  
+  
+    <g transform="translate (-7, -10)" >
+      <defs>
+      <!-- Pfad für einen Kreis mit Mittelpunkt (150,150) und Radius 100 -->
+      <path id="circlePath" d="M 150,150 m -100,0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0" />
+    </defs>
+  
+    <!-- Text entlang des Kreises -->
+    <text fill="black" font-size="31" text-anchor="middle">
+      <textPath href="#circlePath" startOffset="25%">
+        Smoked Penguin
+      </textPath>
+    </text>
+    </g>
+  
+     <!-- Hintergrund für Sichtbarkeit -->
+  
+    <!-- Rauchwolke -->
+    <g fill="black" opacity="0.9" transform="translate (-100, -100)">
+      <!-- Rauchkreis 1 -->
+      <circle cx="150" cy="200" r="10">
+        <animate attributeName="cy" from="200" to="50" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="r" from="10" to="40" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" from="0.5" to="0" dur="5s" repeatCount="indefinite" />
+      </circle>
+  
+      <!-- Rauchkreis 2 -->
+      <circle cx="150" cy="210" r="5">
+        <animate attributeName="cy" from="210" to="60" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="cx" from="150" to="120" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="r" from="5" to="35" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" from="0.5" to="0" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+  
+      <!-- Rauchkreis 3 -->
+      <circle cx="150" cy="220" r="2">
+        <animate attributeName="cy" from="220" to="70" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="cx" from="150" to="180" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="r" from="2" to="25" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" from="0.5" to="0" dur="6s" repeatCount="indefinite" />
+      </circle>
+  
+      <!-- Rauchkreis 3 -->
+      <circle cx="150" cy="210" r="3">
+        <animate attributeName="cy" from="210" to="60" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="cx" from="150" to="190" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="r" from="3" to="15" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" from="0.5" to="0" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </svg>
+  
+  
+  
+  
   </body>
 </html>
