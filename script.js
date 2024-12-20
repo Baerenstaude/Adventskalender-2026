@@ -45,6 +45,8 @@ function showImage(buttonElement) {
         buttonElement.style.color = 'transparent';
         buttonElement.style.cursor = 'default';
         buttonElement.disabled = true; // Button deaktivieren
+         // Füge die Klasse hinzu, die den Hover-Effekt entfernt
+            buttonElement.classList.add('no-hover');
     }
 
   }
