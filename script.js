@@ -46,4 +46,5 @@ function showImage(buttonElement) {
         buttonElement.style.cursor = 'default';
         buttonElement.disabled = true; // Button deaktivieren
     }
-} 
+
+  }
