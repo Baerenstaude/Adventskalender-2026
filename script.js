@@ -47,6 +47,8 @@ function showImage(buttonElement) {
         buttonElement.disabled = true; // Button deaktivieren
          // Füge die Klasse hinzu, die den Hover-Effekt entfernt
             buttonElement.classList.add('no-hover');
-    }
+        // Füge die Klasse hinzu, die den Hover-Effekt entfernt
+        buttonElement.classList.add('no-hover');
+}   
 
   }

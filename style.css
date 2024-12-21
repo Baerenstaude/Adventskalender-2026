@@ -61,6 +61,20 @@
   font-size: xx-large;
 }
 
+ /* Standard-Hover-Effekt */
+ .container button:hover {
+  background: linear-gradient(90deg, rgba(13, 8, 86, 0), rgba(87, 10, 131, 0.349));
+  color: black;
+}
+
+/* Klasse, um den Hover-Effekt zu deaktivieren */
+.no-hover {
+  background-color: gray; /* Farbe nach Deaktivierung */
+  color: transparent; /* Text unsichtbar */
+  cursor: default; /* Kein Hover-Cursor */
+  pointer-events: none; /* Deaktiviert Hover-Ereignisse */
+}
+
 #penguin{
   position: absolute; /* Absolut positionieren */
       top: 0rem;          /* Abstand vom oberen Rand */
