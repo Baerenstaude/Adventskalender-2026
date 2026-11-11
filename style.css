@@ -22,17 +22,25 @@
   font-family: "Arial";
 }
 
+.scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;        /* ermöglicht das horizontale Scrollen */
+  -webkit-overflow-scrolling: touch;
+}
+
 .container {
-  width: 97%; /* Breite des Containers */ 
-  height: 48rem; /* Höhe des Containers */ 
-  background-image: url('img/SunsetAtNonnos.png'); /* Hintergrundbild */ 
-  background-size: 76rem; /* Größe des Hintergrundbilds anpassen */ 
-  display: grid; 
-  grid-template-columns: repeat(6, 1fr); /* 6 Spalten */ 
-  grid-template-rows: repeat(4, 1fr); /* 4 Reihen */ 
-  gap: 0.7rem; /* Abstand zwischen den Bildern */ 
+  width: 76rem;            /* fixe Breite = Bildbreite, sonst passt das Bild nie ganz rein */
+  min-width: 97%;          /* auf großen Screens weiterhin fast volle Breite */
+  height: 48rem;
+  background-image: url('img/SunsetAtNonnos.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.7rem;
   padding: 1rem;
-}  
+}
 
 .container button {
   position: relative; 
