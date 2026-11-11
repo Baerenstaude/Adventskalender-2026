@@ -21,7 +21,7 @@ function changeBackgroundColor() {
         document.body.style.color = "white";
     }
 
-}
+}Z
     
     // Kapitelüberschrift Farbe ändern
     let chapterHeading = document.getElementById("chapterheading"); // Beispiel für den Zugriff auf das Element

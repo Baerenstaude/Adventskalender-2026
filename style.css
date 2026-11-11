@@ -25,7 +25,7 @@
 .container {
   width: 97%; /* Breite des Containers */ 
   height: 48rem; /* Höhe des Containers */ 
-  background-image: url('img/Screenshot 2024-12-17 143506.png'); /* Hintergrundbild */ 
+  background-image: url('img/SunsetAtNonnos.png'); /* Hintergrundbild */ 
   background-size: 76rem; /* Größe des Hintergrundbilds anpassen */ 
   display: grid; 
   grid-template-columns: repeat(6, 1fr); /* 6 Spalten */ 
