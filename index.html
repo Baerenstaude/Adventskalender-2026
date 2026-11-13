@@ -1,168 +1,212 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smoking Penguin</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" async></script>
-    <link rel="icon" type="image/x-icon" href="img/image copy 12.png">
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Snowing Penguin</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
+  <link rel="icon" type="image/x-icon" href="img/image copy 12.png">
 </head>
-  <body>
-    <div>
-    <h1 id="chapter-heading">Online Adventskalender</h1>
-  </div>
-    
-    <div>
+
+<body>
+
+  <!-- Intro und Pinguin -->
+  <div class="intro-penguin-layout">
+
+    <div class="intro-content">
+
+      <h1 id="chapter-heading">Online Adventskalender</h1>
+
       <h1 class="Uberschriften">Intro</h1>
+
       <p id="introtext">
-        Willkommen auf diesem Online Anventskalender. Jeden Tag können Sie auf ein Türchen drücken und Bild aufdecken, das Sie in Weihnachtsstimmung bringt. Viel Spass beim ausprobieren.
+        Willkommen auf diesem Online Adventskalender.
+        Jeden Tag können Sie auf ein Türchen drücken und
+        Bild aufdecken, das Sie in Weihnachtsstimmung bringt.
+        Viel Spass beim ausprobieren.
       </p>
+
     </div>
 
-<div class="scroll-wrapper">
-    <div class="container"> 
-      <button onclick="showImage(this)"><img src="img/WhatsApp Image 2026-09-06 at 13.03.28.jpeg" alt="1.Dez">1</button> 
+    <!-- Pinguin -->
+   <svg
+  id="penguin"
+  viewBox="0 0 300 550"
+  width="300"
+  height="550"
+  xmlns="http://www.w3.org/2000/svg">
+
+      <g transform="translate (-7, 120)">
+
+        <ellipse cx="150" cy="150" rx="50" ry="100" fill="black"/>
+
+        <ellipse cx="104" cy="97" rx="14" ry="4" fill="gold" stroke="black"/>
+        <ellipse cx="104" cy="90" rx="20" ry="7" fill="gold" stroke="black"/>
+
+        <ellipse cx="150" cy="80" rx="13" ry="10" fill="white" stroke-width="3"/>
+        <ellipse cx="150" cy="80" rx="5" ry="5" fill="black"/>
+
+        <ellipse cx="120" cy="170" rx="18" ry="54" fill="white" stroke="black"/>
+        <ellipse cx="135" cy="248" rx="35" ry="10" fill="orange" stroke="black"/>
+
+        <path d="M 125 60 L 184 73 L 188 68 L 184 62 L 128 49 L 123 53 Z" fill="lightgray"/>
+
+        <path d="M 128 49 L 150 35 L 190 30 L 230 60 L 240 130 L 220 80 L 184 62 Z" fill="red" stroke="black"/>
+
+        <circle cx="240" cy="130" r="10" fill="lightgray" stroke="black"/>
+
+        <clipPath id="clip-circle">
+          <rect x="150" y="135" width="150" height="150"/>
+        </clipPath>
+
+        <ellipse cx="170" cy="150" rx="15" ry="80"
+          fill="rgb(0,0,0)" stroke="grey"
+          clip-path="url(#clip-circle)"/>
+
+        <path id="circle-motion" d="M 125 60 L 184 73 L 188 68 L 184 62 L 128 49 L 123 53 Z"
+          fill="lightgray" stroke="black"/>
+
+      </g>
+
+      <!-- Schriftzug -->
+      <g transform="translate (-7, 70)">
+
+        <defs>
+          <path id="circlePath"
+            d="M 150,150 m -100,0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"/>
+        </defs>
+
+        <text fill="black" font-size="31" text-anchor="middle">
+          <textPath href="#circlePath" startOffset="25%">
+            El Penguín
+          </textPath>
+        </text>
+
+      </g>
+
+      <!-- Animierter Schneefall -->
+      <g fill="white" stroke="lightgray" stroke-width="0.5" opacity="0.9">
+
+        <!-- Schneeflocke 1 -->
+        <circle cx="50" cy="-10" r="4">
+          <animate attributeName="cy" from="-10" to="400" dur="5s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="50;60;45;50" dur="5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 2 -->
+        <circle cx="100" cy="-30" r="3">
+          <animate attributeName="cy" from="-30" to="400" dur="6s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="100;90;110;100" dur="6s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 3 -->
+        <circle cx="150" cy="-20" r="5">
+          <animate attributeName="cy" from="-20" to="400" dur="7s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="150;165;140;150" dur="7s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 4 -->
+        <circle cx="200" cy="-40" r="3">
+          <animate attributeName="cy" from="-40" to="400" dur="5.5s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="200;190;210;200" dur="5.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 5 -->
+        <circle cx="250" cy="-15" r="4">
+          <animate attributeName="cy" from="-15" to="400" dur="6.5s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="250;260;240;250" dur="6.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 6 -->
+        <circle cx="75" cy="-50" r="2">
+          <animate attributeName="cy" from="-50" to="400" dur="4.5s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="75;85;65;75" dur="4.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 7 -->
+        <circle cx="180" cy="-60" r="3">
+          <animate attributeName="cy" from="-60" to="400" dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="180;170;190;180" dur="8s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Schneeflocke 8 -->
+        <circle cx="125" cy="-80" r="4">
+          <animate attributeName="cy" from="-80" to="400" dur="7.5s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="125;135;115;125" dur="7.5s" repeatCount="indefinite"/>
+        </circle>
+
+      </g>
+
+    </svg>
+    <!-- Pinguin fertig -->
+
+  </div>
+  <!-- Intro und Pinguin fertig -->
+
+
+  <!-- Adventskalender -->
+  <div class="scroll-wrapper">
+
+    <div class="container">
+
+      <button onclick="showImage(this)"><img src="img/WhatsApp Image 2026-09-06 at 13.03.28.jpeg" alt="1.Dez">1</button>
       <button onclick="showImage(this)"><img src="img/CoZoJa5Ge.png" alt="2.Dez">2</button>
       <button onclick="showImage(this)"><img src="img/image copy 3.png" alt="3.Dez">3</button>
-      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634 - Kopie (2).jpg" alt="4.Dez">4</button> 
-      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634 - Kopie (3).jpg" alt="5.Dez">5</button> 
-      <button onclick="showImage(this)"><img src="img/image copy 7.png" alt="6.Dez">6</button> 
-      <button onclick="showImage(this)"><img src="img/image copy 8.png" alt="7.Dez">7</button> 
-      <button onclick="showImage(this)"><img src="img/image copy 10.png" alt="8.Dez">8</button> 
-      <button onclick="showImage(this)"><img src="img/image copy 9.png" alt="9.Dez">9</button> 
-      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634 - Kopie.jpg" alt="10.Dez">10</button> 
-      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634.jpg" alt="11.Dez">11</button> 
-      <button onclick="showImage(this)"><img src="img/d9675b04-ffec-4730-b4d2-f93ed713bf54.webp" alt="12.Dez">12</button> 
-      <button onclick="showImage(this)"><img src="img/b43350e7-6d4b-4162-8b59-fa5521b071f1.webp" alt="1.Dez">13</button> 
-      <button onclick="showImage(this)"><img src="img/image copy 15.png" alt="2.Dez">14</button>
-      <button onclick="showImage(this)"><img src="img/d5bfd73f-66a1-4e69-b674-d8517891a72c.webp" alt="3.Dez">15</button>
-      <button onclick="showImage(this)"><img src="img/image copy 17.png" alt="4.Dez">16</button> 
-      <button onclick="showImage(this)"><img src="img/7e37d6d288f9ff72315a1b5f4705fb07.jpg" alt="5.Dez">17</button> 
-      <button onclick="showImage(this)"><img src="img/7e37d6d288f9ff72315a1b5f4705fb07 (1).jpg" alt="6.Dez">18</button> 
-      <button onclick="showImage(this)"><img src="img/cats-christmas-pets-HD-Wallpapers 03.jpg" alt="7.Dez">19</button> 
-      <button onclick="showImage(this)"><img src="img/29biden-laststand2-videoSixteenByNineJumbo1600.jpg" alt="8.Dez">20</button> 
-      <button onclick="showImage(this)"><img src="img/image copy 11.png" alt="9.Dez">21</button> 
-      <button onclick="showImage(this)"><img src="img/STK-20241220-WA0001.webp" alt="10.Dez">22</button> 
-      <button onclick="showImage(this)"><img src="img/WhatsApp Bild 2024-12-17 um 13.55.33_1adacbed copy.jpg" alt="11.Dez">23</button> 
-      <button onclick="showImage(this)"><img src="img/9e10f1db-857e-4693-a7de-9ebde617879c.webp" alt="12.Dez">24</button> 
+      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634 - Kopie (2).jpg" alt="4.Dez">4</button>
+      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634 - Kopie (3).jpg" alt="5.Dez">5</button>
+      <button onclick="showImage(this)"><img src="img/image copy 7.png" alt="6.Dez">6</button>
+      <button onclick="showImage(this)"><img src="img/image copy 8.png" alt="7.Dez">7</button>
+      <button onclick="showImage(this)"><img src="img/image copy 10.png" alt="8.Dez">8</button>
+      <button onclick="showImage(this)"><img src="img/image copy 9.png" alt="9.Dez">9</button>
+      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634 - Kopie.jpg" alt="10.Dez">10</button>
+      <button onclick="showImage(this)"><img src="img/43a58db102e1ba551580ed115d271634.jpg" alt="11.Dez">11</button>
+      <button onclick="showImage(this)"><img src="img/d9675b04-ffec-4730-b4d2-f93ed713bf54.webp" alt="12.Dez">12</button>
+      <button onclick="showImage(this)"><img src="img/b43350e7-6d4b-4162-8b59-fa5521b071f1.webp" alt="13.Dez">13</button>
+      <button onclick="showImage(this)"><img src="img/image copy 15.png" alt="14.Dez">14</button>
+      <button onclick="showImage(this)"><img src="img/d5bfd73f-66a1-4e69-b674-d8517891a72c.webp" alt="15.Dez">15</button>
+      <button onclick="showImage(this)"><img src="img/image copy 17.png" alt="16.Dez">16</button>
+      <button onclick="showImage(this)"><img src="img/7e37d6d288f9ff72315a1b5f4705fb07.jpg" alt="17.Dez">17</button>
+      <button onclick="showImage(this)"><img src="img/7e37d6d288f9ff72315a1b5f4705fb07 (1).jpg" alt="18.Dez">18</button>
+      <button onclick="showImage(this)"><img src="img/cats-christmas-pets-HD-Wallpapers 03.jpg" alt="19.Dez">19</button>
+      <button onclick="showImage(this)"><img src="img/29biden-laststand2-videoSixteenByNineJumbo1600.jpg" alt="20.Dez">20</button>
+      <button onclick="showImage(this)"><img src="img/image copy 11.png" alt="21.Dez">21</button>
+      <button onclick="showImage(this)"><img src="img/STK-20241220-WA0001.webp" alt="22.Dez">22</button>
+      <button onclick="showImage(this)"><img src="img/WhatsApp Bild 2024-12-17 um 13.55.33_1adacbed copy.jpg" alt="23.Dez">23</button>
+      <button onclick="showImage(this)"><img src="img/9e10f1db-857e-4693-a7de-9ebde617879c.webp" alt="24.Dez">24</button>
+
     </div>
-</div>
-    
-    <div>
-      <h1 class="Uberschriften">Schlusswort</h1>
-      <p class="Haupttext">
-      Vielen Dank für das Nutzen der Website. Wenn Sie zufrieden sind, empfehlen Sie sie gerne weiter an Verwandte und Freunde. Wir wünschen Ihnen eine abwechslungsreiche Adventszeit und frohe Weihnachten.
-      </p>
-    </div>
+  </div>
+  <!-- Adventskalender fertig -->
 
-    <div class="flex-box">
-      <button id="colorchange-button" onclick="changeBackgroundColor()">Style ändern</button>
-    </div>
 
-<!-- Pinguin -->
-    <svg height="400" width="300" id="penguin">
-      <g transform="translate (-7, 120)">
-        <ellipse cx="150" cy="150" rx="50" ry="100" fill="black">
-      </ellipse>
-       <rect width="40" height="10" x="53" y="89" rx="20" ry="20" fill= rgb(130,80,0) />
-       <ellipse cx="104" cy="97" rx="14" ry="4" fill="gold" stroke="black">
-      </ellipse>
-      <ellipse cx="104" cy="90" rx="20" ry="7" fill="gold" stroke="black">
-      </ellipse>
-      <ellipse cx="150" cy="80" rx="13" ry="10" fill="white" stroke="red" stroke-width="3">
-      </ellipse>
-      <ellipse cx="150" cy="80" rx="5" ry="5" fill="black">
-      </ellipse>
-       <ellipse cx="120" cy="170" rx="18" ry="54" fill="white" stroke="black">
-      </ellipse>
-      <ellipse cx="135" cy="248" rx="35" ry="10" fill="orange" stroke="black">
-      </ellipse>
-  
-      <path d="M 125 60 L 184 73 L 188 68 L 184 62 L 128 49 L 123 53 Z" fill="lightgray" />
-      
-      <path d="M 128 49 L 150 35 L 190 30 L 230 60 L 240 130 L 220 80 L 184 62 Z" fill="red" stroke="black"/>
-      
-      <circle cx="240" cy="130" r="10" fill="lightgray" stroke="black"/>
-      
-      <clipPath id="clip-circle">
-        <rect x="150" y="135" width="150" height="150" />
-      </clipPath>
-      <ellipse cx="170" cy="150" rx="15" ry="80" fill= rgb(0,0,0) stroke= "grey"
-      clip-path="url(#clip-circle)">
-      </ellipse>
-  
-      <path id="circle-motion" d="M 125 60 L 184 73 L 188 68 L 184 62 L 128 49 L 123 53 Z" fill="lightgray" stroke="black"/>
-      </g>
-  
-  
-    <g transform="translate (-7, 70)" >
-      <defs>
-      <!-- Pfad für einen Kreis mit Mittelpunkt (150,150) und Radius 100 -->
-      <path id="circlePath" d="M 150,150 m -100,0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0" />
-    </defs>
-    <!-- Text entlang des Kreises -->
-    <text fill="black" font-size="31" text-anchor="middle">
-      <textPath href="#circlePath" startOffset="25%">
-        Smoking Penguin
-      </textPath>
-    </text>
+  <!-- Schlusswort -->
+  <div>
 
-    </g>
-    <!-- Rauchwolke -->
-    <g fill="black" opacity="0.9" transform="translate (-100, -100)">
-      <!-- Rauchkreis 1 -->
-      <circle cx="150" cy="300" r="10">
-        <animate attributeName="cy" from="300" to="50" dur="5s" repeatCount="indefinite" />
-        <animate attributeName="cx" from="150" to="125" dur="5s" repeatCount="indefinite" />
-        <animate attributeName="r" from="10" to="40" dur="5s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.5" to="0" dur="5s" repeatCount="indefinite" />
-      </circle>
-  
-      <!-- Rauchkreis 2 -->
-      <circle cx="150" cy="300" r="5">
-        <animate attributeName="cy" from="300" to="60" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="cx" from="150" to="120" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="r" from="5" to="35" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.5" to="0" dur="4.5s" repeatCount="indefinite" />
-      </circle>
-  
-      <!-- Rauchkreis 3 -->
-      <circle cx="150" cy="300" r="2">
-        <animate attributeName="cy" from="300" to="70" dur="4s" repeatCount="indefinite" />
-        <animate attributeName="cx" from="150" to="180" dur="4s" repeatCount="indefinite" />
-        <animate attributeName="r" from="2" to="25" dur="4s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.5" to="0" dur="4s" repeatCount="indefinite" />
-      </circle>
-  
-      <!-- Rauchkreis 4 -->
-      <circle cx="150" cy="300" r="3">
-        <animate attributeName="cy" from="300" to="60" dur="7s" repeatCount="indefinite" />
-        <animate attributeName="cx" from="150" to="190" dur="7s" repeatCount="indefinite" />
-        <animate attributeName="r" from="3" to="15" dur="7s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.5" to="0" dur="7s" repeatCount="indefinite" />
-      </circle>
+    <h1 class="Uberschriften">Schlusswort</h1>
 
-      <!-- Rauchkreis 5 -->
-      <circle cx="150" cy="300" r="7">
-        <animate attributeName="cy" from="300" to="60" dur="5.5s" repeatCount="indefinite" />
-        <animate attributeName="cx" from="150" to="200" dur="5.5s" repeatCount="indefinite" />
-        <animate attributeName="r" from="7" to="30" dur="5.5s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.5" to="0" dur="5.5s" repeatCount="indefinite" />
-      </circle>
+    <p class="Haupttext">
+      Vielen Dank für das Nutzen der Website.
+      Wenn Sie zufrieden sind, empfehlen Sie sie gerne weiter
+      an Verwandte und Freunde. Wir wünschen Ihnen eine
+      abwechslungsreiche Adventszeit und frohe Weihnachten.
+    </p>
 
-      <!-- Rauchkreis 6 -->
-      <circle cx="150" cy="300" r="3">
-        <animate attributeName="cy" from="300" to="60" dur="9s" repeatCount="indefinite" />
-        <animate attributeName="cx" from="150" to="230" dur="9s" repeatCount="indefinite" />
-        <animate attributeName="r" from="3" to="15" dur="9s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.5" to="0" dur="9s" repeatCount="indefinite" />
-      </circle>
-    </g>
-  </svg>
-<!-- Pinguin fertig -->
-  </body>
+  </div>
+
+
+  <!-- Style-Button -->
+  <div class="flex-box">
+
+    <button id="colorchange-button" onclick="changeBackgroundColor()">
+      Style ändern
+    </button>
+
+  </div>
+
+</body>
 </html>
-/*git add .
-/*git commit -m "Änderung"
-/*git push
