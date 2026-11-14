@@ -35,20 +35,44 @@ function changeBackgroundColor() {
 }
 
 
-function showImage(buttonElement) {
-       let Türchenzahl = document.getElementById("container button");
-       const img = buttonElement.querySelector('img');
-       
-    if (img) {
-        img.style.display = 'block'; // Zeige das Bild an
-        buttonElement.style.border = 'none';
-        buttonElement.style.color = 'transparent';
-        buttonElement.style.cursor = 'default';
-        buttonElement.disabled = true; // Button deaktivieren
-         // Füge die Klasse hinzu, die den Hover-Effekt entfernt
-            buttonElement.classList.add('no-hover');
-        // Füge die Klasse hinzu, die den Hover-Effekt entfernt
-        buttonElement.classList.add('no-hover');
-}   
 
-  }
+// Adventskalender automatisch erstellen
+const kalender = document.getElementById("calendar-grid");
+
+for (let tag = 1; tag <= 24; tag++) {
+
+    const button = document.createElement("button");
+
+    // Deine bisherige Funktion aufrufen
+    button.onclick = function() {
+        showImage(this);
+    };
+
+    const bild = document.createElement("img");
+
+    bild.src = `img/${tag}.png`;
+    bild.alt = tag + ". Dezember";
+
+    button.appendChild(bild);
+    button.appendChild(document.createTextNode(tag));
+
+    kalender.appendChild(button);
+}
+
+
+// Bilder beim Anklicken anzeigen
+function showImage(buttonElement) {
+
+    const img = buttonElement.querySelector("img");
+
+    if (img) {
+        img.style.display = "block";
+        buttonElement.style.border = "none";
+        buttonElement.style.color = "transparent";
+        buttonElement.style.cursor = "default";
+        buttonElement.disabled = true;
+
+        // Hover-Effekt entfernen
+        buttonElement.classList.add("no-hover");
+    }
+}
