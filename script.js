@@ -1,39 +1,39 @@
+
 function changeBackgroundColor() {
-    // Hintergrundfarbe abrufen
+    // Hintergrundfarbe der gesamten Seite ändern
     let backgroundColor = document.body.style.backgroundColor;
-    
-    // Hintergrundfarbe ändern
-    if (backgroundColor === "grey") {
+
+    if (backgroundColor === "grey" || backgroundColor === "") {
         document.body.style.backgroundColor = "white";
+        document.body.style.color = "darkblue";
     } else if (backgroundColor === "white") {
         document.body.style.backgroundColor = "pink";
+        document.body.style.color = "white";
     } else {
         document.body.style.backgroundColor = "grey";
-    }
-    
-    // Textfarbe abrufen
-    let color = document.body.style.color;
-    
-    // Textfarbe ändern
-    if (backgroundColor === "grey") {
-        document.body.style.color = "black";
-    } else {
         document.body.style.color = "white";
     }
 
-}Z
-    
-    // Kapitelüberschrift Farbe ändern
-    let chapterHeading = document.getElementById("chapterheading"); // Beispiel für den Zugriff auf das Element
-    let chapterColor = chapterHeading.style.color;
-    
-    if (chapterColor === "grey") {
-        chapterHeading.style.color = "white";
+    // Hintergrundfarbe der Kapitelüberschrift ändern
+    let chapterHeading = document.getElementById("chapter-heading");
+    let chapterColor = chapterHeading.style.backgroundColor;
+
+    if (chapterColor === "grey" || chapterColor === "") {
+        chapterHeading.style.backgroundColor = "white";
     } else if (chapterColor === "white") {
-        chapterHeading.style.color = "pink";
+        chapterHeading.style.backgroundColor = "pink";
     } else {
-        chapterHeading.style.color = "grey";
+        chapterHeading.style.backgroundColor = "grey";
     }
+
+    // Schriftfarbe der Kapitelüberschrift anpassen
+    if (chapterHeading.style.backgroundColor === "white") {
+        chapterHeading.style.color = "darkblue";
+    } else {
+        chapterHeading.style.color = "white";
+    }
+}
+
 
 function showImage(buttonElement) {
        let Türchenzahl = document.getElementById("container button");
