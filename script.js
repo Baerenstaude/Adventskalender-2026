@@ -53,6 +53,12 @@ for (let tag = 1; tag <= 24; tag++) {
     bild.src = `img/${tag}.png`;
     bild.alt = tag + ". Dezember";
 
+    if (tag === 2) {
+    bild.src = "img/2.54";
+} else {
+    bild.src = `img/${tag}.png`;
+}
+
     button.appendChild(bild);
     button.appendChild(document.createTextNode(tag));
 
